@@ -1,8 +1,8 @@
 #include <advent-of-code.hpp>
 #include <iostream>
 #include <limits>
-#include <string>
 #include <sstream>
+#include <string>
 
 int main() {
   int sum = 0, curr;
