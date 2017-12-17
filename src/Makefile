@@ -18,6 +18,7 @@ $(OBJDIR):
 
 $(OBJDIR)/%: %.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
+	strip -s $@
 
 clean:
 	rm -rf $(OBJDIR)
