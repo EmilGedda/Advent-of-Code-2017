@@ -5,11 +5,11 @@ OBJDIR = ../bin
 SRCS = $(wildcard  *.cpp)
 OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.cpp=))
 CXX = clang++
-CXXFLAGS = -O2 -march=native -Wall -Werror -std=c++17 -I../include
+CXXFLAGS = -O3 -march=native -Wall -Werror -std=c++17 -I../include
 
 .PHONY: all clean
 
-all: $(OBJS)
+cpp all: $(OBJS)
 
 $(OBJS): | $(OBJDIR)
 
