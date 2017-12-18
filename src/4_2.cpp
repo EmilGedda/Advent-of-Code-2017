@@ -1,9 +1,9 @@
 #include <advent-of-code.hpp>
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <unordered_map>
-#include <algorithm>
 
 int main() {
 
