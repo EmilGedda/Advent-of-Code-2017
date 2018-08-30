@@ -17,7 +17,7 @@ int find_divisor_results(const std::vector<int> &row) {
   return std::numeric_limits<int>::lowest();
 }
 
-int main() {
+int test() {
   int sum = 0;
   std::string line;
   while (std::getline(std::cin, line)) {
@@ -28,5 +28,5 @@ int main() {
       row.push_back(curr);
     sum += find_divisor_results(row);
   }
-  std::cout << sum << '\n';
+  return sum;
 }

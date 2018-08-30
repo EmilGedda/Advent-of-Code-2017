@@ -21,7 +21,7 @@ void redistribute(std::vector<int> &banks) {
   }
 }
 
-int main() {
+int test() {
   std::vector<int> banks(std::istream_iterator<int>(std::cin),
                               std::istream_iterator<int>{});
   std::unordered_map<int, bool> not_a_bloom_filter;
@@ -48,5 +48,5 @@ int main() {
     }
   }
 
-  std::cout << steps << '\n';
+  return steps;
 }

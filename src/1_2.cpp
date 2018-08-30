@@ -1,7 +1,7 @@
 #include <advent-of-code.hpp>
 #include <iostream>
 
-int main() {
+int test() {
   int ctr = 0;
   std::string input;
   std::cin >> input;
@@ -10,5 +10,5 @@ int main() {
     if (input[i] == input[(i + offset) % input.size()])
       ctr += input[i] - '0';
   }
-  std::cout << ctr << '\n';
+  return ctr;
 }

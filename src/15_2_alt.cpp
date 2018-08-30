@@ -8,7 +8,7 @@ uint64_t generator(uint64_t g, uint64_t factor, uint64_t mod) {
   return (g * factor) % mod;
 }
 
-int main() {
+int test() {
   uint64_t a = 516;
   uint64_t b = 190;
   uint64_t ctr = 0;
@@ -23,5 +23,5 @@ int main() {
     } while ((b % 8) != 0);
     ctr += uint16_t(a) == uint16_t(b);
   }
-  std::cout << ctr << '\n';
+  return ctr;
 }

@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <vector>
 
-int main() {
+int test() {
   int steps = 0;
   std::vector<std::size_t> banks(std::istream_iterator<std::size_t>(std::cin),
                                  std::istream_iterator<std::size_t>{});
@@ -40,5 +40,5 @@ int main() {
     steps++;
   }
 
-  std::cout << steps << '\n';
+  return steps;
 }

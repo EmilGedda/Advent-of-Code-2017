@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-int main() {
+int test() {
 
   int idx = 0, steps = 0;
   std::vector<int> instructions(std::istream_iterator<int>(std::cin),
@@ -13,5 +13,5 @@ int main() {
     idx += instructions[idx]++;
     steps++;
   }
-  std::cout << steps << '\n';
+  return steps;
 }

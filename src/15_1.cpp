@@ -6,7 +6,7 @@ uint64_t generator(uint64_t g) {
   return (g * factor) % mod;
 }
 
-int main() {
+int test() {
   uint64_t a = 516;
   uint64_t b = 190;
   uint64_t ctr = 0;
@@ -15,5 +15,5 @@ int main() {
     b = generator<48271>(b);
     ctr += uint16_t(a) == uint16_t(b);
   }
-  std::cout << ctr << '\n';
+  return ctr;
 }

@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-int main() {
+int test() {
   int sum = 0, curr;
   std::string line;
   while (std::getline(std::cin, line)) {
@@ -17,5 +17,5 @@ int main() {
     }
     sum += max - min;
   }
-  std::cout << sum << '\n';
+  return sum;
 }

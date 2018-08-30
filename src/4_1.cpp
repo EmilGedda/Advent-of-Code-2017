@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-int main() {
+int test() {
 
   std::string line;
   int valid = 0;
@@ -18,5 +18,5 @@ int main() {
     }
     valid += inserted;
   }
-  std::cout << valid << '\n';
+  return valid;
 }

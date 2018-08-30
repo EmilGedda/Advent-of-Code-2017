@@ -3,7 +3,7 @@
 #include <iostream>
 #include <numeric>
 
-int main() {
+int test() {
   int pos;
   std::cin >> pos;
   int sqr = std::ceil(std::sqrt(pos));
@@ -15,5 +15,5 @@ int main() {
   const int offset = (sqr * sqr - pos) % period;        // center of axis offset
   const int dist = std::abs(offset - period / 2) + min; // cummulative distance
 
-  std::cout << dist << '\n';
+  return dist;
 }
