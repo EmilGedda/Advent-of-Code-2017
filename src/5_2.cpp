@@ -6,7 +6,7 @@
 
 int test() {
 
-  int idx = 0, steps = 0;
+  size_t idx = 0, steps = 0;
   std::vector<int> instructions(std::istream_iterator<int>(std::cin),
                                 std::istream_iterator<int>{});
   while (idx >= 0 && idx < instructions.size()) {

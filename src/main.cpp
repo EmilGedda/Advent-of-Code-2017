@@ -1,6 +1,8 @@
 #include <iostream>
 #include <chrono>
 
+#define STR_EXPAND(x) #x
+#define STR(x) STR_EXPAND(x)
 extern int test();
 
 int main() {
@@ -10,7 +12,8 @@ int main() {
   auto answer = test();
   auto end    = steady_clock::now();
 
-  std::cout << "Answer: " << answer << "\nExecution time: " 
+  std::cout << "Running solution: " STR(SOLUTION) << "\n"
+    << "Answer: " << answer << "\nExecution time: " 
     << duration_cast<duration<float>>(end - start).count() << "s\n";
 
 }

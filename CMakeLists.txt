@@ -9,6 +9,7 @@ foreach(file ${srcs})
     add_executable(${_target} ${file} ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
     message(STATUS "Adding target: ${_target}")
     target_compile_features(${_target} PRIVATE cxx_std_20)
+    target_compile_definitions(${_target} PRIVATE SOLUTION=${_target})
     target_compile_options(${_target} PRIVATE -march=native -Wall -Wextra -pedantic)
     target_include_directories(${_target} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
@@ -16,9 +17,8 @@ foreach(file ${srcs})
     string(REPLACE "_" ";" _testparts ${_target})
     list(GET _testparts 0 _test)
     message(STATUS "Adding test: ${_test}.txt")
-    add_custom_target("test_${_target}"
+    add_custom_command(TARGET ${_target} POST_BUILD
         COMMAND $<TARGET_FILE:${_target}> < ${CMAKE_CURRENT_SOURCE_DIR}/tests/${_test}.txt
-        DEPENDS ${_target}    
     )
 
 endforeach()

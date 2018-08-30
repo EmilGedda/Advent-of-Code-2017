@@ -6,8 +6,8 @@
 #include <vector>
 
 int find_divisor_results(const std::vector<int> &row) {
-  for (int i = 0; i < row.size(); i++) {
-    for (int j = i + 1; j < row.size(); j++) {
+  for (size_t i = 0; i < row.size(); i++) {
+    for (size_t j = i + 1; j < row.size(); j++) {
       const int max = std::max(row[i], row[j]);
       const int min = std::min(row[i], row[j]);
       if (max % min == 0)
