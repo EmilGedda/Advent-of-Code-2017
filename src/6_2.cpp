@@ -22,8 +22,8 @@ void redistribute(std::vector<int> &banks) {
 }
 
 int main() {
-  std::vector<std::int> banks(std::istream_iterator<std::int>(std::cin),
-                              std::istream_iterator<std::int>{});
+  std::vector<int> banks(std::istream_iterator<int>(std::cin),
+                              std::istream_iterator<int>{});
   std::unordered_map<int, bool> not_a_bloom_filter;
 
   // Modified Boost hash_combine
